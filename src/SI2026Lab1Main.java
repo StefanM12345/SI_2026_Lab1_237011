@@ -45,6 +45,17 @@ class Library {
         }
         return false;
     }
+    public void borrowBook(String title)
+    {
+        for (Book b : books) {
+            if (b.getTitle().equalsIgnoreCase(title) && !b.isBorrowed()) { b.setBorrowed(true);
+                System.out.println("Borrowed successfully");
+                return;
+            }
+    }
+        System.out.println("Book not available");
+    }
+
 
 
 
@@ -70,7 +81,7 @@ public class SI2026Lab1Main {
         System.out.println(library.searchBook("Harry Potter"));
 
         // TEST BORROW
-
+        library.borrowBook("Harry Potter");
 
         // TEST GENRE
         library.printByGenre("Fantasy");
