@@ -1,0 +1,81 @@
+Име: Стефан
+Презиме: Митев
+Број на индекс: 237011git log --oneline --graph --all
+
+----------------------------------------
+ДЕЛ 1: Git команди користени
+
+1. Креирање и работа со гранки:
+
+git checkout -b feature-search-books
+git checkout master
+git merge feature-search-books
+
+git checkout -b feature-borrow-book
+git checkout -b feature-genre-report
+
+----------------------------------------
+2. Feature search books:
+
+Команда за commit:
+git add .
+git commit -m "Implement book search"
+
+Push:
+git push origin feature-search-books
+
+----------------------------------------
+3. Feature borrow book:
+
+git add .
+git commit -m "Implement borrow book"
+
+Push:
+git push origin feature-borrow-book
+
+----------------------------------------
+4. Feature genre report:
+
+git add .
+git commit -m "Implement genre report"
+
+Push:
+git push origin feature-genre-report
+
+----------------------------------------
+5. Merge операции:
+
+- feature-search-books -> master
+  Merge: fast-forward (ако master немал други промени)
+
+- feature-genre-report -> master
+  Merge: fast-forward (или recursive ако имало различни commits)
+
+- feature-borrow-book -> master
+  Merge: recursive (поради различни промени во master)
+
+----------------------------------------
+6. Конфликт (ако имало):
+
+Конфликт се појави при merge на master во feature-borrow-book.
+Решен е со рачно избирање на верзијата и бришење на конфликт markers:
+<<<<<<<, =======, >>>>>>>
+
+Merge strategy: recursive
+
+----------------------------------------
+7. Git логови:
+
+git log --oneline --graph --all
+
+PS C:\Users\Stefan\Desktop\SI_2026_Lab1_237011> git log --oneline --graph --all
+* 84c2a83 (HEAD -> master, origin/feature-search-books, feature-search-books) Implement book search
+* 3492828 (origin/master) Add starter code
+* 5e41675 Initial commit
+
+----------------------------------------
+8. Финален commit:
+
+git add logs.txt INDEX.txt
+git commit -m "Final commit"
+git push origin master
