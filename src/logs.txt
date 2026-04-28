@@ -1,0 +1,14 @@
+PS C:\Users\Stefan\Desktop\SI_2026_Lab1_237011> git log --oneline --graph --all
+*   6f48881 (HEAD -> master, origin/master) Merge branch 'feature-borrow-book'
+|\
+| *   819463c (feature-borrow-book) Resolve merge conflict
+| |\
+| * | 786a5f0 (origin/feature-borrow-book) Implement borrow book
+| * | 94eadd9 final commit
+* | |   03c4bec Merge branch 'feature-genre-report'
+|\ \ \
+| |_|/
+|/| |
+| * | bc1d15a (origin/feature-genre-report, feature-genre-report) Implement genre report
+* | | 90a84f1 Update borrow message on master
+:
