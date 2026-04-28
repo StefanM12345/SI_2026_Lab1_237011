@@ -48,8 +48,11 @@ class Library {
     public void borrowBook(String title)
     {
         for (Book b : books) {
-            if (b.getTitle().equalsIgnoreCase(title) && !b.isBorrowed()) { b.setBorrowed(true);
-                System.out.println("Borrowed successfully");
+
+            if (b.getTitle().equalsIgnoreCase(title) && !b.isBorrowed()) {
+                b.setBorrowed(true);
+                System.out.println("Book checked out");
+
                 return;
             }
     }
