@@ -45,17 +45,22 @@ class Library {
         }
         return false;
     }
-
-    public void borrowBook(String title) {
+    public void borrowBook(String title)
+    {
         for (Book b : books) {
+
             if (b.getTitle().equalsIgnoreCase(title) && !b.isBorrowed()) {
                 b.setBorrowed(true);
                 System.out.println("Book checked out");
+
                 return;
             }
-        }
+    }
         System.out.println("Book not available");
     }
+
+
+
 
     public void printByGenre(String genre) {
         for (Book b : books) {
